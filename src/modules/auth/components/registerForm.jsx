@@ -6,15 +6,14 @@ export default function RegisterForm() {
 
    const handleSubmit = async (e) => {
        e.preventDefault();
-       await fetch("http://localhost:8000/api/users/register",
+       await fetch("http://localhost:8000/users/register",
            {
                method: "POST",
-               body: formData,
+               body: JSON.stringify(formData),
                headers: {
                    "Content-Type": "application/json",
                }
            }).then(res => res.json())
-
    }
 
    const handleChange = (e) => {
