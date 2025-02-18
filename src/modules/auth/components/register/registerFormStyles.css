@@ -1,0 +1,99 @@
+.form-wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: #747bff;
+    border-radius: 10px;
+    color: #1a1a1a;
+    font-family: Bahnschrift;
+    padding: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+form div{
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+form input{
+    width: 100%;
+    margin-top: 1px;
+    padding: 0.9em;
+    border: none;
+    border-radius: 4px;
+}
+
+form span a{
+    color: white;
+}
+
+form button{
+    margin-top: 0.1em;
+}
+
+.TermsConditionLink{
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.separatorContainer{
+    width: 90%;
+    position: relative;
+    text-align: center;
+}
+.separatorContainer::after{
+    content: "";
+}
+
+.separator {
+    position: relative;
+    z-index: 1; /* Asegura que el texto esté por encima de las líneas */
+    padding: 0 10px; /* Espacio a los lados del texto */
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100%; /* Mitad del ancho del contenedor */
+    height: 1px;
+    background-color: #000; /* Color de la línea */
+}
+
+.separator::before {
+    right: 100%; /* Línea a la izquierda del texto */
+    margin-right: 10px; /* Espacio entre la línea y el texto */
+}
+
+.separator::after {
+    left: 100%; /* Línea a la derecha del texto */
+    margin-left: 10px; /* Espacio entre la línea y el texto */
+}
+
+.login-options{
+    width: 85%;
+}
+
+.login-options button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+span svg{
+    width: 1em;
+    height: 1em;
+    margin-right: 1em;
+}
