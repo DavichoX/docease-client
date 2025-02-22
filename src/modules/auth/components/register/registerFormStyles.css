@@ -6,6 +6,8 @@
     color: #1a1a1a;
     font-family: Bahnschrift;
     padding: 30px;
+    width: 30%;
+    margin: 5% auto;
 }
 
 form{
@@ -20,7 +22,7 @@ form div{
     margin: 1em;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 70%;
     align-items: center;
 }
 
@@ -89,7 +91,7 @@ form button{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 70%;
 }
 
 span svg{
