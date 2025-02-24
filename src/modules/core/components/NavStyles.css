@@ -14,5 +14,28 @@ nav{
 
 .left-menu{
     display: flex;
+}
 
+.navigation-home-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: Symbol;
+    font-weight: bolder;
+}
+
+.nav-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 3em;
+}
+
+.listitem{
+    margin: 0 3em;
 }
