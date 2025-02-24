@@ -33,7 +33,7 @@ function HomeWPNav() {
                         <div className="nav-items">
                             <Item
                                 clase1={"listitem home-button-wrapper"}
-                                clase2={"home-button-container"}
+                                clase2={"home-button-container item-container"}
                                 clase3={"home-button"}
                                 clase4={"presentation"}
                                 presentation={"Home"}
@@ -41,16 +41,40 @@ function HomeWPNav() {
                             />
                             <Item
                                 clase1={"listitem recent-button-wrapper"}
-                                clase2={"recent-button-container"}
+                                clase2={"recent-button-container item-container"}
                                 clase3={"recent-button"}
                                 clase4={"presentation"}
                                 presentation={"Recent"}
                                 link={"recent"}
                             />
+                            <Item
+                                clase1={"listitem templates-button-wrapper"}
+                                clase2={"templates-button-container item-container"}
+                                clase3={"templates-button"}
+                                clase4={"presentation"}
+                                presentation={"Templates"}
+                                link={"templates"}
+                            />
+                            <Item
+                                clase1={"listitem create-button-wrapper"}
+                                clase2={"create-button-container item-container"}
+                                clase3={"create-button"}
+                                clase4={"presentation"}
+                                presentation={"Create"}
+                                link={"create"}
+                            />
                         </div>
                     </div>
-                    <div className="right-menu">
 
+                    <div className="right-menu">
+                        <div className="search-bar-wrapper">
+                            <div className="search-bar-container">
+                                <div className="search-bar">
+                                    <span></span>
+                                    <input type="text" placeholder="Search..." />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </nav>
             </header>
