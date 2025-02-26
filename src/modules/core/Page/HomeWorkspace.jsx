@@ -1,4 +1,4 @@
-import HomeWPNav from "../components/HomeWPNav.jsx";
+import HomeWPNav from "../components/HomePageNav.jsx";
 
 function HomeWorkspace() {
     return (
