@@ -23,7 +23,7 @@ function RegisterForm() {
    }
 
     return (
-        <div className="form-wrapper">
+        <div className="form-wrapper flex flex-col bg-teal-800 border-1 rounded-lg text-gray-300  wx-auto " style={{margin: '5% auto', padding: '3%'}} >
             <div className="register-presentation">
                 <h2>
                     Sign Up
@@ -32,7 +32,7 @@ function RegisterForm() {
                     Welcome to Docease! Sign up to get started
                 </span>
             </div>
-            <form method="POST" onSubmit={handleSubmit}>
+            <form method="POST" onSubmit={handleSubmit} className="flex flex-col  h-[90%] justify-center items-center">
                 <div className="input-wrapper">
                     <input type="text" name="username" placeholder="username" value={formData.username || ""}
                            onChange={handleChange}/>
@@ -46,16 +46,21 @@ function RegisterForm() {
                            onChange={handleChange}/>
                 </div>
                 <span className="TermsConditionLink">
-                Pressing submit you accept our <a href="">Terms and Conditions</a> and <a href="">Privacy Policy</a>
+                    Pressing submit you accept our
+                    <br/>
+                    <a href="">Terms and Conditions</a>
+                    <br/>
+                    and <br/>
+                    <a href="">Privacy Policy</a>
                 </span>
                 <div className="buttonContainer">
-                    <button>Submit</button>
+                    <button className=" bg-teal-900 hover:bg-teal-700 border-2 border-white">Submit</button>
                 </div>
                 <div className="separatorContainer">
                     <span className="separator">or</span>
                 </div>
                 <div className="login-options">
-                    <button className="google-oauth">
+                    <button className="google-oauth bg-white text-gray-900 hover:bg-gray-200 border-2 border-white flex flex-row justify-between items-center">
                         <span>
                             <svg width="800px" height="800px" viewBox="-3 0 262 262" xmlns="http://www.w3.org/2000/svg"
                                  preserveAspectRatio="xMidYMid"><path
@@ -67,13 +72,14 @@ function RegisterForm() {
                                 fill="#FBBC05"/><path
                                 d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"
                                 fill="#EB4335"/></svg>
-                            Continue with Google
                         </span>
+                        <span className="text-sm">Continue with Google</span>
                     </button>
                 </div>
                 <span>
-                Already have an account? <Link to="/login">Log in</Link>
-            </span>
+                Already have an account?
+                <Link to="/login"> Log in</Link>
+                </span>
             </form>
         </div>
 
