@@ -1,7 +1,7 @@
 
 function HomePageNav() {
     return (
-        <div className="navigation-wrapper w-12.5 h-screen text-white flex flex-col align-items-center">
+        <div className="navigation-wrapper sticky w-12.5 h-screen text-white flex flex-col align-items-center">
             <div className="navigation-bar-container h-full bg-teal-800 text-white flex flex-col">
                 <nav className="navigation-bar h-full flex flex-col justify-between">
                     <div className="sup-menu w-full h-1/2 flex flex-col items-center">
