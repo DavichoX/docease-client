@@ -1,5 +1,8 @@
 import {useEffect, useState} from "react";
 import ProjectCard from "./projectCard.jsx";
+import RecentProjects from "./recentProjects.jsx";
+import OverviewTable from "./overviewTable.jsx";
+
 function HomePageMain() {
     /*
     * <div className="aproject shadow-md shadow-gray-800 w-60 p-8 bg-white  border-2 border-teal-800 flex flex-col justify-center items-center rounded-lg">
@@ -66,33 +69,17 @@ function HomePageMain() {
         )
     }
      */
-    const projectData = {
-        id: "123",
-        title: "Some Title",
-        creator: "David Rengifo",
-        created_at: "February 04, 2025",
-        status: "No Edited",
-        assigned: "someone"
-    }
+
 
     return (
-        <div className="home-main w-[100%] h-full bg-gray-100 overflow-y-auto">
+        <div className="home-main w-full h-full bg-gray-100 overflow-y-auto">
             <div className="home-body w-full h-full bg-green-100">
                 <div className="home-content w-full h-full  flex flex-row justify-center items-center">
-                    <div className="top-content recent-summary absolute w-[97%] top-0 py-10 flex flex-col">
-                        <div className="indicator text-start px-15">
-                            <h3 className="text-gray-900"> Recent Projects </h3>
-                        </div>
-                        <div className="recent-projects mt-5 flex gap-30 px-50 py-10">
-                            <ProjectCard projectData={projectData} />
-                        </div>
-                        <hr/>
-                    </div>
-                    <div className="botton-content tracking-table">
-
-                    </div>
+                    <RecentProjects />
+                    <OverviewTable />
                 </div>
             </div>
+
         </div>
     )
 }
