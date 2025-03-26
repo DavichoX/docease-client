@@ -1,16 +1,24 @@
 @import "tailwindcss";
 
-
-
+/*
 #root {
-  min-width: 100%;
+  min-width: 100vw;
   min-height: 100vh;
   text-align: center;
   margin: 0 auto;
   padding: 0;
   display: flex;
 }
+*/
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
-
-
-
+[data-reactroot], [data-reactid] {
+  width: 100%;
+  max-width: 100%;
+}
