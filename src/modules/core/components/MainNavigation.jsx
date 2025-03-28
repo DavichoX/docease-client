@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 function MainNavigation() {
     return (
-        <nav className="navbar w-64 min-h-full bg-gray-800 bg-opacity-80 backdrop-blur-md text-white shadow-lg overflow-y-auto sticky top-0">
+        <nav className="navbar w-74 min-h-full bg-opacity-80 backdrop-blur-md text-gray-800 shadow-lg overflow-y-auto sticky top-0">
             <div className="w-full px-4 py-6">
                 <div className="navbar-header">
                     <ul role="list" className="navbar-menu space-y-2">
                         <li role="listItem" className="nav-item">
                             <div role="presentation">
                                 <Link to={"/"} className="nav-link">
-                                    <span className="flex items-center p-3 hover:bg-gray-700 hover:scale-105 rounded-lg transition-all duration-200">
+                                    <span className="flex items-center p-3 text-gray-800 hover:bg-gray-200 hover:scale-105 rounded-lg transition-all duration-200">
                                         <span className="item-icon mr-3">
                                             <BsHouse size={20} />
                                         </span>
@@ -25,7 +25,7 @@ function MainNavigation() {
 
                             <div role="presentation">
                                 <a href="" className="nav-link">
-                                    <span className="flex items-center p-3 hover:bg-gray-700 hover:scale-105 rounded-lg transition-all duration-200">
+                                    <span className="flex items-center p-3 text-gray-800 hover:bg-gray-200 text-gray-200 hover:scale-105 rounded-lg transition-all duration-200">
                                         <span className="item-icon mr-3">
                                             <BsFileEarmark size={20} />
                                         </span>
@@ -40,7 +40,7 @@ function MainNavigation() {
 
                             <div role="presentation">
                                 <a href="" className="nav-link">
-                                    <span className="flex items-center p-3 hover:bg-gray-700 hover:scale-105 rounded-lg transition-all duration-200">
+                                    <span className="flex items-center p-3 text-gray-800 hover:bg-gray-200 hover:scale-105 rounded-lg transition-all duration-200">
                                         <span className="item-icon mr-3">
                                             <BsDiagram3 size={20} />
                                         </span>
@@ -55,7 +55,7 @@ function MainNavigation() {
 
                             <div role="presentation">
                                 <a href="" className="nav-link">
-                                    <span className="flex items-center p-3 hover:bg-gray-700 hover:scale-105 rounded-lg transition-all duration-200">
+                                    <span className="flex items-center p-3 text-gray-800 hover:bg-gray-200 hover:scale-105 rounded-lg transition-all duration-200">
                                         <span className="item-icon mr-3">
                                             <BsBarChart size={20} />
                                         </span>
@@ -70,7 +70,7 @@ function MainNavigation() {
 
                             <div role="presentation">
                                 <a href="" className="nav-link">
-                                    <span className="flex items-center p-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 rounded-lg transition-all duration-200">
+                                    <span className="flex items-center p-3 bg-gradient-to-r from-teal-700 to-green-200 hover:from-teal-800 hover:to-green-300 rounded-lg transition-all duration-200">
                                         <span className="item-icon mr-3">
                                             <BsPlus size={20} />
                                         </span>

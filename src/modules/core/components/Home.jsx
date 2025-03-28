@@ -55,9 +55,8 @@ function HomeView({ viewMode }) {
     ];
 
     const renderDocuments = () => {
-        if (viewMode === "list") {
             return (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex gap-4 justify-center items-center  ">
                     {documents.map((doc) => (
                         <motion.li
                             key={doc.id}
@@ -67,12 +66,10 @@ function HomeView({ viewMode }) {
                             transition={{ duration: 0.3 }}
                         >
                             <div
-                                className={`aproject bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200 flex flex-col items-center ${
-                                    doc.status === "Completed" ? "border-l-4 border-green-500" : "border-l-4 border-yellow-500"
-                                }`}
+                                className={`aproject bg-white border border-gray-200 w-60 rounded-lg p-4 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200 flex flex-col items-center `}
                                 onClick={() => setSelectedDocument(doc)}
                             >
-                                <a href={`/${doc.id}`} className="flex flex-col items-center">
+                                <a href={`/${doc.id}`} className="flex flex-col items-center ">
                                     <div className="doc-logo mb-3">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -131,79 +128,13 @@ function HomeView({ viewMode }) {
                     ))}
                 </div>
             );
-        } else if (viewMode === "kanban") {
-            // Vista Kanban (simulada)
-            return (
-                <div className="flex space-x-4">
-                    <div className="w-1/3 p-4 bg-gray-100 rounded-lg">
-                        <h3 className="text-md font-semibold text-gray-800 mb-2">Draft</h3>
-                        {documents
-                            .filter((doc) => doc.status === "no edited")
-                            .map((doc) => (
-                                <motion.div
-                                    key={doc.id}
-                                    className="bg-white border border-gray-200 rounded-lg p-3 mb-2 shadow-sm hover:shadow-md transition-all duration-200"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ duration: 0.3 }}
-                                >
-                                    <h4 className="text-sm font-semibold">{doc.title}</h4>
-                                    <p className="text-xs text-gray-600">Creator: {doc.creator}</p>
-                                </motion.div>
-                            ))}
-                    </div>
-                    <div className="w-1/3 p-4 bg-gray-100 rounded-lg">
-                        <h3 className="text-md font-semibold text-gray-800 mb-2">In Progress</h3>
-                        {documents
-                            .filter((doc) => doc.status === "edited")
-                            .map((doc) => (
-                                <motion.div
-                                    key={doc.id}
-                                    className="bg-white border border-gray-200 rounded-lg p-3 mb-2 shadow-sm hover:shadow-md transition-all duration-200"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ duration: 0.3 }}
-                                >
-                                    <h4 className="text-sm font-semibold">{doc.title}</h4>
-                                    <p className="text-xs text-gray-600">Creator: {doc.creator}</p>
-                                </motion.div>
-                            ))}
-                    </div>
-                    <div className="w-1/3 p-4 bg-gray-100 rounded-lg">
-                        <h3 className="text-md font-semibold text-gray-800 mb-2">Completed</h3>
-                        {documents
-                            .filter((doc) => doc.status === "Completed")
-                            .map((doc) => (
-                                <motion.div
-                                    key={doc.id}
-                                    className="bg-white border border-gray-200 rounded-lg p-3 mb-2 shadow-sm hover:shadow-md transition-all duration-200"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ duration: 0.3 }}
-                                >
-                                    <h4 className="text-sm font-semibold">{doc.title}</h4>
-                                    <p className="text-xs text-gray-600">Creator: {doc.creator}</p>
-                                </motion.div>
-                            ))}
-                    </div>
-                </div>
-            );
-        } else if (viewMode === "calendar") {
-            // Vista Calendario (simulada)
-            return (
-                <div className="p-4 bg-white rounded-lg shadow-sm">
-                    <h3 className="text-lg font-semibold text-gray-800 mb-4">Calendar View</h3>
-                    <p className="text-gray-600">Simulated calendar view (implement with a calendar library like FullCalendar).</p>
-                </div>
-            );
-        }
     };
 
     return (
-        <div className="content-wrapper h-full p-6 bg-gray-50 flex">
+        <div className="content-wrapper h-full p-6 bg-gray-100 flex">
             {/* Recent Documents (Main Area) */}
             <div className="w-7/12">
-                <div className="recent-displayer p-4 bg-blue-50 rounded-lg shadow-sm border border-gray-200">
+                <div className="recent-displayer bg-white p-4 hover:shadow-md hover:scale-102 transition-all duration-200 h-80 rounded-lg overflow-x-hidden shadow-sm border border-gray-200 hover:cursor-grab">
                     <h2 className="text-lg font-semibold text-gray-800 mb-4">Recent Documents</h2>
                     {renderDocuments()}
                 </div>
@@ -211,18 +142,18 @@ function HomeView({ viewMode }) {
 
             {/* Recent Workflows (Sidebar) */}
             <div className="w-5/12 ml-6">
-                <div className="recent-displayer p-4 bg-purple-50 rounded-lg shadow-sm border border-gray-200">
+                <div className="recent-displayer bg-white p-2 hover:shadow-md hover:scale-102 transition-all duration-200 h-80 rounded-lg shadow-sm border border-gray-200 hover:cursor-grab">
                     <h2 className="text-lg font-semibold text-gray-800 mb-4">Recent Workflows</h2>
                     <div className="recent-workflows space-y-4">
                         {workflows.map((workflow) => (
                             <motion.div
                                 key={workflow.id}
-                                className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200 flex flex-col items-center"
+                                className="bg-white hover:cursor-pointer border border-gray-200 rounded-lg p-4 h-30 shadow-sm hover:shadow-md hover:scale-102 hover:pointer transition-all duration-200 flex flex-col"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.3 }}
                             >
-                                <a href={`/${workflow.id}`} className="flex flex-col items-center">
+                                <a href={`/${workflow.id}`} className="flex flex-row items-center">
                                     <div className="doc-logo mb-3">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -268,7 +199,7 @@ function HomeView({ viewMode }) {
                                             />
                                         </svg>
                                     </div>
-                                    <div className="doc-metadata text-center">
+                                    <div className="doc-metadata ">
                                         <h2 className="doc-title text-sm font-semibold text-gray-800 mb-1">{workflow.title}</h2>
                                         <span className="doc-creator block text-xs text-gray-600">Creator: {workflow.creator}</span>
                                         <span className="doc-created_at block text-xs text-gray-600">Created: {workflow.created_at}</span>
